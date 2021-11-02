@@ -1,0 +1,205 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+nav {
+  height: 100px;
+  width: 99vw;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: orange;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+footer {
+  height: 50px;
+  background-color: orange;
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p{
+    margin-right: 50px;
+    color: white;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.logo {
+  height: 100px;
+  border-radius: 100%;
+  margin-left: 50px;
+}
+
+ul {
+  margin-right: 50px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  margin: 0 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.administracion {
+  display: flex;
+  margin-top: 150px;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  opacity: 0.4;
+}
+
+.caracteristicas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+form {
+  margin-top: 30px;
+  width: 30vw;
+}
+
+.input {
+  width: 98%;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: lightgray;
+}
+
+.guardar {
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
+table {
+    margin-top: 30px;
+  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  width: 50%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 5 5 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+tbody {
+  overflow-x: auto;
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+}
+
+td {
+  cursor: pointer;
+}
+
+th {
+  background-color: #55608f;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.icon{
+    height: 15px;
+}
+
+select{
+    width: 100%;
+}
+
+.container_caracteristicas{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+button{
+    margin-top: 10px;
+}
+
+.spinner{
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://fondosmil.com/fondo/20087.jpg');
+}
+
+.card{
+    height: 200px;
+    width: 500px;
+    background-color: lightgray;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.card_button{
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: darkorange;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.mascotas{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 300px;
+    padding: 0 15%;
+}
+
+.precio{
+    margin-bottom: 30px;
+}
