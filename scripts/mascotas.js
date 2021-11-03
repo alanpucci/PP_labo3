@@ -1,11 +1,13 @@
-const crearCard = () => {
+import {$,create, obtenerLista} from './utils.js';
+
+const crearCards = () => {
     const lista = obtenerLista();
     lista.forEach(mascota => {
         const $card = create('div');
-        const $h3 = create('h3');
+        const $h2 = create('h2');
         const h3Text = document.createTextNode(`${mascota.titulo}`);
-        const $p = create('p');
-        const pText = document.createTextNode(`${mascota.descripcion} con ${mascota.vacunas == "Si" ? "vacunas al día": "sin vacunas al día"}`);
+        const $h4 = create('h4');
+        const h4Text = document.createTextNode(`${mascota.descripcion} con ${mascota.vacunas == "Si" ? "vacunas al día": "sin vacunas al día"}`);
         const $span = create('p');
         const spanText = document.createTextNode(`$ ${mascota.precio}`);
         const $button = create('button');
@@ -21,11 +23,11 @@ const crearCard = () => {
         const $imagenVacuna = create('img');
         const $vacunaTexto = document.createTextNode(mascota.vacuna);
         $imagenRaza.src = './assets/icono_raza.png';
-        $imagenRaza.classList.add('icon');
+        $imagenRaza.classList.add('card_icon');
         $imagenNacimiento.src = './assets/icono_nacimiento.png';
-        $imagenNacimiento.classList.add('icon');
+        $imagenNacimiento.classList.add('card_icon');
         $imagenVacuna.src = './assets/icono_vacuna.png';
-        $imagenVacuna.classList.add('icon');
+        $imagenVacuna.classList.add('card_icon');
         $razaContainer.appendChild($imagenRaza);
         $razaContainer.appendChild($razaTexto);
         $nacimientoContainer.appendChild($imagenNacimiento);
@@ -40,14 +42,12 @@ const crearCard = () => {
         $span.classList.add('precio');
         $button.appendChild(buttonText);
         $button.classList.add("card_button")
-        $span.style.color = "green";
-        $span.style.margin = "10px"
-        $h3.appendChild(h3Text);
-        $p.appendChild(pText);
+        $h2.appendChild(h3Text);
+        $h4.appendChild(h4Text);
         $span.appendChild(spanText);
         $card.classList.add("card");
-        $card.appendChild($h3);
-        $card.appendChild($p);
+        $card.appendChild($h2);
+        $card.appendChild($h4);
         $card.appendChild($span);
         $card.appendChild($caracteristicas);
         $card.appendChild($button);
@@ -55,16 +55,12 @@ const crearCard = () => {
     })
 }
 
-const obtenerLista = () => {
-    return JSON.parse(localStorage.getItem("lista")) || [];
+const cargando = () => {
+    $('spinner').style.display = "flex";
+    setTimeout(() => {
+            $('spinner').style.display = "none";
+        }, 3000);
 }
-
-const $ = elemento => {
-    return document.getElementById(elemento);
-}
-
-const create = elemento => {
-    return document.createElement(elemento);
-}
-
-crearCard();
+    
+crearCards();
+cargando();

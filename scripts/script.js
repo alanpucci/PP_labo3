@@ -1,4 +1,5 @@
 import Anuncio_Mascota from "./anuncioMascota.js";
+import {$, create, obtenerLista} from './utils.js'
 
 const $form = document.getElementsByTagName("form")[0];
 
@@ -19,15 +20,6 @@ const handleForm = () => {
         $form.reset();
     })
 }
-
-const $ = elemento => {
-    return document.getElementById(elemento);
-}
-
-const create = elemento => {
-    return document.createElement(elemento);
-}
-
 
 const obtenerMaxId = () => {
     const lista = obtenerLista();
@@ -100,10 +92,6 @@ const actualizarLocalStorage = lista => {
     localStorage.setItem("lista", JSON.stringify(lista))
 }
 
-const obtenerLista = () => {
-    return JSON.parse(localStorage.getItem("lista")) || [];
-}
-
 const cargando = () => {
     $('spinner').style.display = "flex";
     setTimeout(() => {
@@ -111,16 +99,5 @@ const cargando = () => {
         actualizarTabla();
     }, 3000);
 }
-
-const crearCard = () => {
-    const lista = obtenerLista();
-    lista.forEach(mascota => {
-        const $card = create('div');
-        $card.classList.add("card");
-        console.log(mascota);
-    })
-}
-
-crearCard();
 
 onLoad();

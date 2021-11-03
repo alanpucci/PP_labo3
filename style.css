@@ -1,11 +1,15 @@
+html {
+  height: 100%;
+}
+
 body {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 nav {
@@ -31,9 +35,9 @@ footer {
   justify-content: space-between;
 }
 
-footer p{
-    margin-right: 50px;
-    color: white;
+footer p {
+  margin-right: 50px;
+  color: white;
 }
 
 .navbar {
@@ -69,8 +73,15 @@ a {
   align-items: center;
 }
 
-h1 {
+.h2 {
   opacity: 0.4;
+}
+
+h1{
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
 }
 
 .caracteristicas {
@@ -103,7 +114,7 @@ form {
 }
 
 table {
-    margin-top: 30px;
+  margin-top: 30px;
   background: linear-gradient(45deg, #49a09d, #5f2c82);
   width: 50%;
   border-collapse: collapse;
@@ -137,69 +148,99 @@ tr:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.icon{
-    height: 15px;
+.icon {
+  height: 15px;
 }
 
-select{
+select {
+  width: 100%;
+}
+
+.container_caracteristicas {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.container {
+  background-image: url("https://fondosmil.com/fondo/20087.jpg");
+  background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100%;
-}
-
-.container_caracteristicas{
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-button{
-    margin-top: 10px;
-}
-
-.spinner{
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
-    align-items: center;
-    justify-content: center;
-    top: 0;
     height: 100%;
-    width: 100%;
 }
 
-.container{
-    height: 100vh;
-    width: 100vw;
-    background-image: url('https://fondosmil.com/fondo/20087.jpg');
+.spinner {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
 }
 
-.card{
-    height: 200px;
-    width: 500px;
-    background-color: lightgray;
-    padding: 15px;
-    border: 1px solid black;
+.card {
+  height: 220px;
+  width: 500px;
+  background-color: lightgray;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 30px;
+  background: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
     border-radius: 10px;
-    margin: 30px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-.card_button{
-    width: 100%;
-    height: 50px;
-    color: white;
-    background-color: darkorange;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+.card_button {
+  width: 100%;
+  height: 50px;
+  color: white;
+  background-color: darkorange;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
-.mascotas{
+.card_icon{
+    height: 20px;
+}
+
+.mascotas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding: 0 15%;
+}
+
+.precio {
+  margin-bottom: 10px;
+  color: green;
+}
+
+@media (max-width: 1000px) {
+  nav {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 300px;
-    padding: 0 15%;
-}
-
-.precio{
-    margin-bottom: 30px;
+    flex-direction: column;
+    height: 200px;
+  }
+  ul {
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
 }
